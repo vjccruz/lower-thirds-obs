@@ -1,0 +1,139 @@
+<html>
+<head>
+	<title>OBS - Lower Thirds</title>
+	<meta
+	  name="viewport"
+	  content="minimum-scale=1, initial-scale=1, width=device-width"
+	/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<link rel="stylesheet" href="./css/site.css">
+	<!--getmdl-select-->   
+	<link rel="stylesheet" href="./css/getmdl-select/getmdl-select.min.css">
+	<script defer src="./js/getmdl-select/getmdl-select.min.js"></script>
+</head>
+<body>
+	<!-- Always shows a header, even in smaller screens. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	  <header class="mdl-layout__header">
+		<div class="mdl-layout__header-row">
+		  <!-- Title -->
+		  <span class="mdl-layout-title">Lower Thirds for OBS Studio</span>
+		  <!-- Add spacer, to align navigation to the right -->
+		  <div class="mdl-layout-spacer"></div>
+		  <!-- Navigation. We hide it in small screens. -->
+		  <nav class="mdl-navigation">
+			<a class="mdl-navigation__link" href="#use">Use</a>
+			<a class="mdl-navigation__link" href="#customize">Customize</a>
+		  </nav>
+		</div>
+	  </header>
+	  <main class="mdl-layout__content">
+		<div class="page-content site-max-width">
+			<section id="use">
+				<h2>Use</h2>
+				<div>
+					<ul>
+						<li>Open OBS Studio</li>
+						<li>Add new source of type Browser</li>
+						<li>URL, you can use <a href="customize">Customize</a> to get the url<br /><img src="./img/browser-1.png" /></li>
+						<li>Select "Shutdown source when not visible"<br /><img src="./img/browser-2.png" /></li>
+						<li>Select "Refresh browser when scene becomes active"</li>
+						<li>Example:<br /><img src="./img/browser-3.png" style="width:100%;" /></li>
+					</ul>
+					<small>Note: desactivate and active the source to get the lower third animation.</small>
+				</div>
+			</section>
+			<section id="customize">
+				<h2>Customize</h2>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col">
+						<div class="mdl-textfield mdl-textfield-full-width mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+							<input type="text" value="" class="mdl-textfield__input" id="idtype" readonly>
+							<input type="hidden" value="" name="idtype">
+							<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+							<label for="idtype" class="mdl-textfield__label">Type</label>
+							<ul for="idtype" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+								<li class="mdl-menu__item" data-val="1" data-selected="true">1 <img src="./img/1.png" /></li>
+								<li class="mdl-menu__item" data-val="2">2 <img src="./img/2.png" /></li>
+								<li class="mdl-menu__item" data-val="3">3 <img src="./img/3.png" /></li>
+								<li class="mdl-menu__item" data-val="4">4 <img src="./img/4.png" /></li>
+								<li class="mdl-menu__item" data-val="5">5 <img src="./img/5.png" /></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--6-col">
+						<div class="mdl-textfield mdl-textfield-full-width mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" id="line1">
+							<label class="mdl-textfield__label" for="line1">Line 1</label>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--6-col">
+						<div class="mdl-textfield mdl-textfield-color mdl-js-textfield mdl-textfield--floating-label">
+							<input onkeyup="changeColorPicker(this, 'colorpicker1')" class="mdl-textfield__input" type="text" value="#ffffff" id="color1">
+							<label class="mdl-textfield__label" for="color1">Color for Line 1</label>
+						</div>
+						<input type="color" value="#ffffff" class="mdl-colorpicker" id="colorpicker1" onchange="changeColorPicker(this, 'color1')">
+					</div>
+				</div>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--6-col">
+						<div class="mdl-textfield mdl-textfield-full-width mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" id="line2">
+							<label class="mdl-textfield__label" for="line2">Line 2</label>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--6-col">
+						<div class="mdl-textfield mdl-textfield-color mdl-js-textfield mdl-textfield--floating-label">
+							<input onkeyup="changeColorPicker(this, 'colorpicker1')" class="mdl-textfield__input" type="text" value="#cf4c4e" id="color2">
+							<label class="mdl-textfield__label" for="color2">Color for Line 2</label>
+						</div>
+						<input type="color" value="#cf4c4e" class="mdl-colorpicker" id="colorpicker2" onchange="changeColorPicker(this, 'color2')">
+					</div>
+				</div>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--6-col">
+						<button onclick="preview()" class="btn-preview mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+							Preview
+						</button>
+					</div>
+				</div>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col url-container">
+						<div class="label">
+							URL
+						</div>
+						<!-- mdl-textfield--floating-label is-dirty mdl-textfield__label -->
+						<div onclick="clickToCopy(this)" id="url">https://obs.infor-r.com/lower</div>
+						<div id="urlTooltip" class="mdl-tooltip" data-mdl-for="url">
+							click to copy
+						</div>
+						<input type="text" style="position:absolute;top:-200px;" id="hiddenURL" value="https://obs.infor-r.com/lower">
+					</div>
+				</div>
+				<div class="iframe">
+					<iframe src="/lower?id=1"></iframe>
+				</div>
+			</section>
+		</div>
+		<footer class="mdl-mini-footer">
+			<div class="mdl-mini-footer__left-section">
+				<div class="mdl-logo">by Vasco Cruz</div>
+			</div>
+			<div class="mdl-mini-footer__right-section">
+				<ul class="mdl-mini-footer__link-list">
+					<li>
+						<a href="https://github.com/vjccruz/lower-thirds-obs" class="social-btn social-btn__github" role="button" title="GitHub"></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	  </main>
+	</div>
+	<script src="./js/site.js"></script>
+</body>
+</html>

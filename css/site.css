@@ -1,0 +1,78 @@
+.site-max-width {
+	max-width: 900px;
+    margin: auto;
+}
+.social-btn {
+    display: block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.social-btn__github {
+    background-image: url(/img/github_white_24.svg);
+    width: 22px;
+    height: 22px;
+}
+
+.iframe {
+	background-color: black;
+	margin-bottom: 40px;
+}
+
+iframe {
+	margin: auto;
+	width: 90%;
+}
+
+.mdl-textfield-full-width, .btn-preview {
+	width: 100%;
+}
+
+.mdl-textfield-color {
+	width: 70%;
+}
+
+.mdl-colorpicker {
+	width: 29%;
+}
+
+.mdl-menu__item {
+    background-color: black !important;
+    border-bottom: solid white 1px;
+    color: white;
+}
+
+.getmdl-select .selected {
+    background-color: black !important;
+}
+
+.mdl-menu__item:hover {
+    background-color: black !important;
+}
+
+ul.mdl-js-menu {
+	padding: 0 0 0 0;
+}
+
+ul.mdl-js-menu > li:last-child {
+	border-bottom: solid black 0px;
+}
+
+#url {
+	padding: 10px;
+    background-color: #ddd;
+    border-radius: 2px;
+	cursor: pointer;
+}
+
+.label {
+	color: rgb(63,81,181);
+    font-size: 12px;
+}
+
+.url-container {
+	margin-bottom: 20px;
+}
