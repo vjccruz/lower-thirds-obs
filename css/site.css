@@ -61,6 +61,10 @@ ul.mdl-js-menu > li:last-child {
 	border-bottom: solid black 0px;
 }
 
+.mdl-menu__container img {
+    height: 60px;
+}
+
 #url {
 	padding: 10px;
     background-color: #ddd;
@@ -75,4 +79,29 @@ ul.mdl-js-menu > li:last-child {
 
 .url-container {
 	margin-bottom: 20px;
+}
+
+.mdl-mini-footer p {
+	margin: 0 0 0 0;
+}
+
+li.mdl-list__item.mdl-list__item--two-line {
+    padding-bottom: 0px;
+}
+
+.mdl-list__item--two-line .mdl-list__item-primary-content {
+	height: inherit;
+}
+
+.mdl-list__item--two-line {
+	height: inherit;
+}
+
+.mdl-list__item-primary-content > span {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.mdl-list__item-primary-content img {
+	width: 90%;
 }

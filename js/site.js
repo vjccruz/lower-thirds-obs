@@ -12,11 +12,22 @@ function preview() {
 		color2 = color2.substr(1);
 	}
 	
-	console.log('Id: ' + id);
-	console.log('Line1: ' + line1 + ' Color: ' + color1);
-	console.log('Line2: ' + line2 + ' Color: ' + color2);
+	console.log('Id: ' + id + ' Line1: ' + line1 + ' Color: ' + color1 + ' Line2: ' + line2 + ' Color: ' + color2);
 	
-	var url = '/lower?id=' + id + '&line1=' + encodeURI(line1) + '&color1=' + color1 + '&line2=' + encodeURI(line2) + '&color2=' + color2;
+	var url = '/lower?id=' + id;
+
+	if (line1 !== '') {
+		url += '&line1=' + encodeURI(line1);
+	}
+	if (color1 !== '') {
+		url += '&color1=' + color1;
+	}
+	if (line2 !== '') {
+		url += '&line2=' + encodeURI(line2);
+	}
+	if (color2 !== '') {
+		url += '&color2=' + color2;
+	}
 	
 	document.getElementsByTagName('iframe')[0].src = url;
 	document.getElementById('url').innerHTML = 'https://obs.infor-r.com' + url;
