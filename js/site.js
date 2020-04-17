@@ -52,3 +52,18 @@ function clickToCopy(element) {
 		tooltip.innerHTML = "click to copy";
 	}, 2000);
 }
+
+function clickToScrollTop() {
+	$(".mdl-layout__content").animate({scrollTop:0}, 'slow', "swing");
+	
+	return false;
+}
+
+$(".mdl-layout__content").scroll(function() {
+	var y = $(".mdl-layout__content").scrollTop();
+	if (y > 300) {
+		$('.float-button').fadeIn();
+	} else {
+		$('.float-button').fadeOut();
+	}
+});

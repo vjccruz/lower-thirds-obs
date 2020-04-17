@@ -13,6 +13,7 @@
 	<!--getmdl-select-->   
 	<link rel="stylesheet" href="./css/getmdl-select/getmdl-select.min.css">
 	<script defer src="./js/getmdl-select/getmdl-select.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-31032890-10"></script>
 	<script>
@@ -24,178 +25,189 @@
 	</script>
 </head>
 <body>
+	<!-- Colored FAB button with ripple -->
+	<button onclick="clickToScrollTop()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored float-button">
+		<i class="material-icons">expand_less</i>
+	</button>
 	<!-- Always shows a header, even in smaller screens. -->
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-	  <header class="mdl-layout__header">
-		<div class="mdl-layout__header-row">
-		  <!-- Title -->
-		  <span class="mdl-layout-title">Lower Thirds for OBS Studio</span>
-		  <!-- Add spacer, to align navigation to the right -->
-		  <div class="mdl-layout-spacer"></div>
-		  <!-- Navigation. We hide it in small screens. -->
-		  <nav class="mdl-navigation">
-			<a class="mdl-navigation__link" href="#options">Options</a>
-			<a class="mdl-navigation__link" href="#use">Use</a>
-			<a class="mdl-navigation__link" href="#customize">Customize</a>
-		  </nav>
-		</div>
-	  </header>
-	  <main class="mdl-layout__content">
-		<div class="page-content site-max-width">
-			<section id="options">
-				<h2>Options</h2>
-				<div>
-					<ul class="demo-list-two mdl-list">
-						<li class="mdl-list__item mdl-list__item--two-line">
-							<span class="mdl-list__item-primary-content">
-								<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
-								<span>Type 1</span>
-								<span class="mdl-list__item-sub-title"><img src="./img/1.gif"></span>
-							</span>
-						</li>
-						<li class="mdl-list__item mdl-list__item--two-line">
-							<span class="mdl-list__item-primary-content">
-								<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
-								<span>Type 2</span>
-								<span class="mdl-list__item-sub-title"><img src="./img/2.gif"></span>
-							</span>
-						</li>
-						<li class="mdl-list__item mdl-list__item--two-line">
-							<span class="mdl-list__item-primary-content">
-								<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
-								<span>Type 3</span>
-								<span class="mdl-list__item-sub-title"><img src="./img/3.gif"></span>
-							</span>
-						</li>
-						<li class="mdl-list__item mdl-list__item--two-line">
-							<span class="mdl-list__item-primary-content">
-								<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
-								<span>Type 4</span>
-								<span class="mdl-list__item-sub-title"><img src="./img/4.gif"></span>
-							</span>
-						</li>
-						<li class="mdl-list__item mdl-list__item--two-line">
-							<span class="mdl-list__item-primary-content">
-								<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
-								<span>Type 5</span>
-								<span class="mdl-list__item-sub-title"><img src="./img/5.gif"></span>
-							</span>
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title">Lower Thirds for OBS Studio</span>
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer"></div>
+				<!-- Navigation. We hide it in small screens. -->
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="#info">Info</a>
+					<a class="mdl-navigation__link" href="#options">Options</a>
+					<a class="mdl-navigation__link" href="#use">Use</a>
+					<a class="mdl-navigation__link" href="#customize">Customize</a>
+				</nav>
+			</div>
+		</header>
+		<main class="mdl-layout__content">
+			<div class="page-content site-max-width">
+				<section id="info">
+					<h2>Info</h2>
+					<div>
+						<p>Lower thirds for OBS Studio using HTML, Javascript and CSS.</p>
+						<p>This project is based on After Effects template by Amaksi <a href="http://videohive.net/item/lower-thirds/10338608">http://videohive.net/item/lower-thirds/10338608</a>, and Matt Chestnut <a href="https://codepen.io/mattchestnut/pen/dMrONe">https://codepen.io/mattchestnut/pen/dMrONe</a>.</p>
+					</div>
+				</section>
+				<section id="options">
+					<h2>Options</h2>
+					<div>
+						<ul class="demo-list-two mdl-list">
+							<li class="mdl-list__item mdl-list__item--two-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
+									<span>Type 1</span>
+									<span class="mdl-list__item-sub-title"><img src="./img/1.gif"></span>
+								</span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--two-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
+									<span>Type 2</span>
+									<span class="mdl-list__item-sub-title"><img src="./img/2.gif"></span>
+								</span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--two-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
+									<span>Type 3</span>
+									<span class="mdl-list__item-sub-title"><img src="./img/3.gif"></span>
+								</span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--two-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
+									<span>Type 4</span>
+									<span class="mdl-list__item-sub-title"><img src="./img/4.gif"></span>
+								</span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--two-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
+									<span>Type 5</span>
+									<span class="mdl-list__item-sub-title"><img src="./img/5.gif"></span>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section id="use">
+					<h2>Use</h2>
+					<div>
+						<ul>
+							<li>Open OBS Studio</li>
+							<li>Add new source of type Browser</li>
+							<li>URL<br /><img src="./img/browser-1.png" />
+								<ul>
+									<li>Use <a href="#customize">Customize</a> to generate the URL</li>
+									<li>Click in preview</li>
+									<li>Click on generated URL to copy to clipboard</li>
+								</ul>
+							</li>
+							<li>Select "Shutdown source when not visible"<br /><img src="./img/browser-2.png" /></li>
+							<li>Select "Refresh browser when scene becomes active"</li>
+							<li>Example:<br /><img src="./img/browser-3.png" style="width:100%;" /></li>
+						</ul>
+						<small>Note: desactivate and active the source to get the lower third animation.</small>
+					</div>
+				</section>
+				<section id="customize">
+					<h2>Customize</h2>
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--12-col">
+							<div class="mdl-textfield mdl-textfield-full-width mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+								<input type="text" value="" class="mdl-textfield__input" id="idtype" readonly>
+								<input type="hidden" value="" name="idtype">
+								<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+								<label for="idtype" class="mdl-textfield__label">Type</label>
+								<ul for="idtype" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+									<li class="mdl-menu__item" data-val="1" data-selected="true">1 <img src="./img/1.gif" /></li>
+									<li class="mdl-menu__item" data-val="2">2 <img src="./img/2.gif" /></li>
+									<li class="mdl-menu__item" data-val="3">3 <img src="./img/3.gif" /></li>
+									<li class="mdl-menu__item" data-val="4">4 <img src="./img/4.gif" /></li>
+									<li class="mdl-menu__item" data-val="5">5 <img src="./img/5.gif" /></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--6-col">
+							<div class="mdl-textfield mdl-textfield-full-width mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="line1">
+								<label class="mdl-textfield__label" for="line1">Line 1</label>
+							</div>
+						</div>
+						<div class="mdl-cell mdl-cell--6-col">
+							<div class="mdl-textfield mdl-textfield-color mdl-js-textfield mdl-textfield--floating-label">
+								<input onkeyup="changeColorPicker(this, 'colorpicker1')" class="mdl-textfield__input" type="text" value="#ffffff" id="color1">
+								<label class="mdl-textfield__label" for="color1">Color for Line 1</label>
+							</div>
+							<input type="color" value="#ffffff" class="mdl-colorpicker" id="colorpicker1" onchange="changeColorPicker(this, 'color1')">
+						</div>
+					</div>
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--6-col">
+							<div class="mdl-textfield mdl-textfield-full-width mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="line2">
+								<label class="mdl-textfield__label" for="line2">Line 2</label>
+							</div>
+						</div>
+						<div class="mdl-cell mdl-cell--6-col">
+							<div class="mdl-textfield mdl-textfield-color mdl-js-textfield mdl-textfield--floating-label">
+								<input onkeyup="changeColorPicker(this, 'colorpicker1')" class="mdl-textfield__input" type="text" value="#cf4c4e" id="color2">
+								<label class="mdl-textfield__label" for="color2">Color for Line 2</label>
+							</div>
+							<input type="color" value="#cf4c4e" class="mdl-colorpicker" id="colorpicker2" onchange="changeColorPicker(this, 'color2')">
+						</div>
+					</div>
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--6-col">
+							<button onclick="preview()" class="btn-preview mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+								Preview
+							</button>
+						</div>
+					</div>
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--12-col url-container">
+							<div class="label">
+								URL
+							</div>
+							<!-- mdl-textfield--floating-label is-dirty mdl-textfield__label -->
+							<div onclick="clickToCopy(this)" id="url">https://obs.infor-r.com/lower</div>
+							<div id="urlTooltip" class="mdl-tooltip" data-mdl-for="url">
+								click to copy
+							</div>
+							<input type="text" style="position:absolute;top:-200px;" id="hiddenURL" value="https://obs.infor-r.com/lower">
+						</div>
+					</div>
+					<div class="iframe">
+						<iframe src="/lower?id=1"></iframe>
+					</div>
+				</section>
+			</div>
+			<footer class="mdl-mini-footer">
+				<div class="mdl-mini-footer__left-section">
+					<div class="mdl-logo">
+						<p>by Vasco Cruz</p>
+						<p>Based on After Effects template by Amaksi <a href="http://videohive.net/item/lower-thirds/10338608">http://videohive.net/item/lower-thirds/10338608</a></p>
+						<p>And Matt Chestnut <a href="https://codepen.io/mattchestnut/pen/dMrONe">https://codepen.io/mattchestnut/pen/dMrONe</a></p>
+					</div>
+				</div>
+				<div class="mdl-mini-footer__right-section">
+					<ul class="mdl-mini-footer__link-list">
+						<li>
+							<a href="https://github.com/vjccruz/lower-thirds-obs" class="social-btn social-btn__github" role="button" title="GitHub"></a>
 						</li>
 					</ul>
 				</div>
-			</section>
-			<section id="use">
-				<h2>Use</h2>
-				<div>
-					<ul>
-						<li>Open OBS Studio</li>
-						<li>Add new source of type Browser</li>
-						<li>URL<br /><img src="./img/browser-1.png" />
-							<ul>
-								<li>Use <a href="#customize">Customize</a> to generate the URL</li>
-								<li>Click in preview</li>
-								<li>Click on generated URL to copy to clipboard</li>
-							</ul>
-						</li>
-						<li>Select "Shutdown source when not visible"<br /><img src="./img/browser-2.png" /></li>
-						<li>Select "Refresh browser when scene becomes active"</li>
-						<li>Example:<br /><img src="./img/browser-3.png" style="width:100%;" /></li>
-					</ul>
-					<small>Note: desactivate and active the source to get the lower third animation.</small>
-				</div>
-			</section>
-			<section id="customize">
-				<h2>Customize</h2>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--12-col">
-						<div class="mdl-textfield mdl-textfield-full-width mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
-							<input type="text" value="" class="mdl-textfield__input" id="idtype" readonly>
-							<input type="hidden" value="" name="idtype">
-							<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-							<label for="idtype" class="mdl-textfield__label">Type</label>
-							<ul for="idtype" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-								<li class="mdl-menu__item" data-val="1" data-selected="true">1 <img src="./img/1.gif" /></li>
-								<li class="mdl-menu__item" data-val="2">2 <img src="./img/2.gif" /></li>
-								<li class="mdl-menu__item" data-val="3">3 <img src="./img/3.gif" /></li>
-								<li class="mdl-menu__item" data-val="4">4 <img src="./img/4.gif" /></li>
-								<li class="mdl-menu__item" data-val="5">5 <img src="./img/5.gif" /></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--6-col">
-						<div class="mdl-textfield mdl-textfield-full-width mdl-js-textfield mdl-textfield--floating-label">
-							<input class="mdl-textfield__input" type="text" id="line1">
-							<label class="mdl-textfield__label" for="line1">Line 1</label>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--6-col">
-						<div class="mdl-textfield mdl-textfield-color mdl-js-textfield mdl-textfield--floating-label">
-							<input onkeyup="changeColorPicker(this, 'colorpicker1')" class="mdl-textfield__input" type="text" value="#ffffff" id="color1">
-							<label class="mdl-textfield__label" for="color1">Color for Line 1</label>
-						</div>
-						<input type="color" value="#ffffff" class="mdl-colorpicker" id="colorpicker1" onchange="changeColorPicker(this, 'color1')">
-					</div>
-				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--6-col">
-						<div class="mdl-textfield mdl-textfield-full-width mdl-js-textfield mdl-textfield--floating-label">
-							<input class="mdl-textfield__input" type="text" id="line2">
-							<label class="mdl-textfield__label" for="line2">Line 2</label>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--6-col">
-						<div class="mdl-textfield mdl-textfield-color mdl-js-textfield mdl-textfield--floating-label">
-							<input onkeyup="changeColorPicker(this, 'colorpicker1')" class="mdl-textfield__input" type="text" value="#cf4c4e" id="color2">
-							<label class="mdl-textfield__label" for="color2">Color for Line 2</label>
-						</div>
-						<input type="color" value="#cf4c4e" class="mdl-colorpicker" id="colorpicker2" onchange="changeColorPicker(this, 'color2')">
-					</div>
-				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--6-col">
-						<button onclick="preview()" class="btn-preview mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-							Preview
-						</button>
-					</div>
-				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--12-col url-container">
-						<div class="label">
-							URL
-						</div>
-						<!-- mdl-textfield--floating-label is-dirty mdl-textfield__label -->
-						<div onclick="clickToCopy(this)" id="url">https://obs.infor-r.com/lower</div>
-						<div id="urlTooltip" class="mdl-tooltip" data-mdl-for="url">
-							click to copy
-						</div>
-						<input type="text" style="position:absolute;top:-200px;" id="hiddenURL" value="https://obs.infor-r.com/lower">
-					</div>
-				</div>
-				<div class="iframe">
-					<iframe src="/lower?id=1"></iframe>
-				</div>
-			</section>
-		</div>
-		<footer class="mdl-mini-footer">
-			<div class="mdl-mini-footer__left-section">
-				<div class="mdl-logo">
-					<p>by Vasco Cruz</p>
-					<p>Based on After Effects template by Amaksi</p>
-					<p><a href="http://videohive.net/item/lower-thirds/10338608">http://videohive.net/item/lower-thirds/10338608</a></p>
-					<p><a href="https://codepen.io/mattchestnut/pen/dMrONe">https://codepen.io/mattchestnut/pen/dMrONe</a></p>
-				</div>
-			</div>
-			<div class="mdl-mini-footer__right-section">
-				<ul class="mdl-mini-footer__link-list">
-					<li>
-						<a href="https://github.com/vjccruz/lower-thirds-obs" class="social-btn social-btn__github" role="button" title="GitHub"></a>
-					</li>
-				</ul>
-			</div>
-		</footer>
-	  </main>
+			</footer>
+		</main>
 	</div>
 	<script src="./js/site.js"></script>
 </body>

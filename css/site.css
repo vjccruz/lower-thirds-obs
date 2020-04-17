@@ -1,3 +1,9 @@
+html, body{
+	height: auto;
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
 .site-max-width {
 	max-width: 900px;
     margin: auto;
@@ -104,4 +110,13 @@ li.mdl-list__item.mdl-list__item--two-line {
 
 .mdl-list__item-primary-content img {
 	width: 90%;
+}
+
+.float-button {
+	position: absolute;
+	bottom: 20px;
+	right: 40px;
+	cursor: pointer;
+	z-index: 9999;
+	display: none;
 }
