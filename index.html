@@ -53,45 +53,102 @@
 					<div>
 						<p>Lower thirds for OBS Studio using HTML, Javascript and CSS.</p>
 						<p>This project is based on After Effects template by Amaksi <a href="http://videohive.net/item/lower-thirds/10338608">http://videohive.net/item/lower-thirds/10338608</a>, and Matt Chestnut <a href="https://codepen.io/mattchestnut/pen/dMrONe">https://codepen.io/mattchestnut/pen/dMrONe</a>.</p>
+						<p>Can customize the lower thirds on url via parameters. For example: https://obs.infor-r.com/lower?id=3&line1=OBS&color1=ffffff&line2=Studio&color2=cf4c4e</p>
+						<p><img src="./img/example.gif"></p>
+						<p><small>Note: Source code on <a href="https://github.com/vjccruz/lower-thirds-obs">Github</a> page.</small></p>
 					</div>
 				</section>
 				<section id="options">
 					<h2>Options</h2>
 					<div>
+						<h4>Parameters available</h4>
 						<ul class="demo-list-two mdl-list">
 							<li class="mdl-list__item mdl-list__item--two-line">
 								<span class="mdl-list__item-primary-content">
 									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
+									<span>id</span>
+									<span class="mdl-list__item-sub-title">template number</span>
+								</span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--two-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
+									<span>line1</span>
+									<span class="mdl-list__item-sub-title">text for first line</span>
+								</span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--two-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
+									<span>line2</span>
+									<span class="mdl-list__item-sub-title">text for second line</span>
+								</span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--two-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
+									<span>color1</span>
+									<span class="mdl-list__item-sub-title">first hex color code</span>
+								</span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--two-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
+									<span>color2</span>
+									<span class="mdl-list__item-sub-title">second hex color code</span>
+								</span>
+							</li>
+						</ul>
+						<h4>Templates available</h4>
+						<ul class="demo-list-two mdl-list templates">
+							<li class="mdl-list__item mdl-list__item--two-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
 									<span>Type 1</span>
-									<span class="mdl-list__item-sub-title"><img src="./img/1.gif"></span>
+									<span class="mdl-list__item-sub-title">
+										<b>color1:</b> all text; <b>color2:</b> symbol /
+										<img src="./img/1.gif">
+									</span>
 								</span>
 							</li>
 							<li class="mdl-list__item mdl-list__item--two-line">
 								<span class="mdl-list__item-primary-content">
 									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
 									<span>Type 2</span>
-									<span class="mdl-list__item-sub-title"><img src="./img/2.gif"></span>
+									<span class="mdl-list__item-sub-title">
+										<b>color1:</b> second line; <b>color2:</b> first line
+										<img src="./img/2.gif">
+									</span>
 								</span>
 							</li>
 							<li class="mdl-list__item mdl-list__item--two-line">
 								<span class="mdl-list__item-primary-content">
 									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
 									<span>Type 3</span>
-									<span class="mdl-list__item-sub-title"><img src="./img/3.gif"></span>
+									<span class="mdl-list__item-sub-title">
+										<b>color1:</b> first part of text; <b>color2:</b> second part of text
+										<img src="./img/3.gif">
+									</span>
 								</span>
 							</li>
 							<li class="mdl-list__item mdl-list__item--two-line">
 								<span class="mdl-list__item-primary-content">
 									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
 									<span>Type 4</span>
-									<span class="mdl-list__item-sub-title"><img src="./img/4.gif"></span>
+									<span class="mdl-list__item-sub-title">
+										<b>color1:</b> all text; <b>color2:</b> symbol |
+										<img src="./img/4.gif">
+									</span>
 								</span>
 							</li>
 							<li class="mdl-list__item mdl-list__item--two-line">
 								<span class="mdl-list__item-primary-content">
 									<i class="material-icons mdl-list__item-icon">arrow_forward_ios</i>
 									<span>Type 5</span>
-									<span class="mdl-list__item-sub-title"><img src="./img/5.gif"></span>
+									<span class="mdl-list__item-sub-title">
+										<b>color1:</b> all text; <b>color2:</b> all lines
+										<img src="./img/5.gif">
+									</span>
 								</span>
 							</li>
 						</ul>
@@ -144,24 +201,24 @@
 							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--6-col">
-							<div class="mdl-textfield mdl-textfield-color mdl-js-textfield mdl-textfield--floating-label">
-								<input onkeyup="changeColorPicker(this, 'colorpicker1')" class="mdl-textfield__input" type="text" value="#ffffff" id="color1">
-								<label class="mdl-textfield__label" for="color1">Color for Line 1</label>
-							</div>
-							<input type="color" value="#ffffff" class="mdl-colorpicker" id="colorpicker1" onchange="changeColorPicker(this, 'color1')">
-						</div>
-					</div>
-					<div class="mdl-grid">
-						<div class="mdl-cell mdl-cell--6-col">
 							<div class="mdl-textfield mdl-textfield-full-width mdl-js-textfield mdl-textfield--floating-label">
 								<input class="mdl-textfield__input" type="text" id="line2">
 								<label class="mdl-textfield__label" for="line2">Line 2</label>
 							</div>
 						</div>
+					</div>
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--6-col">
+							<div class="mdl-textfield mdl-textfield-color mdl-js-textfield mdl-textfield--floating-label">
+								<input onkeyup="changeColorPicker(this, 'colorpicker1')" class="mdl-textfield__input" type="text" value="#ffffff" id="color1">
+								<label class="mdl-textfield__label" for="color1">Color for first element</label>
+							</div>
+							<input type="color" value="#ffffff" class="mdl-colorpicker" id="colorpicker1" onchange="changeColorPicker(this, 'color1')">
+						</div>
 						<div class="mdl-cell mdl-cell--6-col">
 							<div class="mdl-textfield mdl-textfield-color mdl-js-textfield mdl-textfield--floating-label">
 								<input onkeyup="changeColorPicker(this, 'colorpicker1')" class="mdl-textfield__input" type="text" value="#cf4c4e" id="color2">
-								<label class="mdl-textfield__label" for="color2">Color for Line 2</label>
+								<label class="mdl-textfield__label" for="color2">Color for second element</label>
 							</div>
 							<input type="color" value="#cf4c4e" class="mdl-colorpicker" id="colorpicker2" onchange="changeColorPicker(this, 'color2')">
 						</div>

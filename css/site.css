@@ -110,6 +110,7 @@ li.mdl-list__item.mdl-list__item--two-line {
 
 .mdl-list__item-primary-content img {
 	width: 90%;
+	margin-left: 55px;
 }
 
 .float-button {
@@ -119,4 +120,12 @@ li.mdl-list__item.mdl-list__item--two-line {
 	cursor: pointer;
 	z-index: 9999;
 	display: none;
+}
+
+.templates .mdl-list__item-icon {
+	margin-top: 0px !important;
+}
+
+.templates .mdl-list__item-sub-title {
+	padding-top: 10px;
 }
