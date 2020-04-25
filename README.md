@@ -9,14 +9,11 @@ More information can be found on https://obs.infor-r.com.
 ## lower-thirds-read-file.lua
 Can load a file with a list of texts to use on lower thirds.
 
-
-
-File struct separated by a |:
+Each file line has 3 columns separated by a |:
 - template id
 - text of line 1
 - text of line 2
 
 File example:
-> 1|Frederic|Colins
-
-> 2|John Doe|Motion Designer
+- Line 1: 5|Frederic|Colins
+- Line 2: 2|John Doe|Motion Designer
