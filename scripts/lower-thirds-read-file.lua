@@ -197,8 +197,7 @@ end
 -- A function named script_description returns the description shown to
 -- the user
 function script_description()
-	return "Load text lines from a file. Hotkeys can be set for next/previous line and to the reset line position. File template:\nTEMPLATE_ID|LINE_1|LINE_2\nTEMPLATE_ID|LINE_1|LINE_2\n\nMade by 
-Vasco Cruz"
+	return "Load text lines from a file. Hotkeys can be set for next/previous line and to the reset line position. File template:\nTEMPLATE_ID|LINE_1|LINE_2\nTEMPLATE_ID|LINE_1|LINE_2\n\nMade by\nVasco Cruz"
 end
 
 -- A function named script_update will be called when settings are changed
