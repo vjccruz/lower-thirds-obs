@@ -67,7 +67,7 @@ switch (animationId) {
 		document.writeln('	<div class="color1 bold arimo mask">');
 		document.writeln('	  <div>' + line1 + '</div>');
 		document.writeln('	</div>');
-		document.writeln('	<div class="color2 mask"><div></div></div>');
+		document.writeln('	<div class="mask"><div class="back2"></div></div>');
 		document.writeln('</div>');
 		break;
 	case '5':
@@ -111,5 +111,11 @@ document.writeln('  color: #' + color1 + ';');
 document.writeln('}');
 document.writeln('.color2 {');
 document.writeln('  color: #' + color2 + ';');
+document.writeln('}');
+document.writeln('.back1 {');
+document.writeln('  background-color: #' + color1 + ' !important;');
+document.writeln('}');
+document.writeln('.back2 {');
+document.writeln('  background-color: #' + color2 + ' !important;'); 
 document.writeln('}');
 document.writeln('</style>');
