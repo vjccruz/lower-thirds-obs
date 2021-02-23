@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Info
 Lower thirds for OBS Studio using HTML, Javascript and CSS.
 
